@@ -3,7 +3,7 @@ Challenge: 00-sayHello (example)
 
 Difficulty: Basic
 
-Prompt:
+Prompt: 
 
 Write a function called sayHello that returns the string "Hello!".
 
@@ -12,7 +12,10 @@ Examples:
 sayHello() //=> Hello!
 -----------------------------------------------------------------*/
 // Your solution for 00-sayHello (example) here:
-function sayHello() {}
+function sayHello() {
+  return("Hello!");
+}
+
 /*-----------------------------------------------------------------
 Challenge: 01-addOne
 
@@ -28,7 +31,10 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
-function addOne(num) {}
+
+function addOne(num) {
+  return num + 1
+}
 /*-----------------------------------------------------------------
 Challenge: 02-addTwoNumbers
 
@@ -47,7 +53,9 @@ addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
-function addTwoNumbers(num1, num2) {}
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
 /*-----------------------------------------------------------------
 Challenge: 03-sumNumbers
 
@@ -66,7 +74,13 @@ sumNumbers([2, 10, -5]) //=> 7
 sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
-function sumNumbers(nums) {}
+function sumNumbers(nums) {
+  let sum = nums.reduce(function (a, b){
+    return a + b
+  });
+  return sum
+}
+
 /*-----------------------------------------------------------------
 Challenge: 04-addList
 
@@ -85,7 +99,13 @@ add(1,50,1.23) //=> 52.23
 add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
-function addList() {}
+function addList(randomList) {
+  if(randomList > 0) {
+    return randomList + n
+  } else {
+    return 0
+  }
+  }
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
 
@@ -105,7 +125,20 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-function computeRemainder(n1, n2) {}
+function computeRemainder(n1, n2) {
+  if (n2 !== 0) {
+  let div = parseInt(n1 / n2) 
+  let remainder = n1 - (div * n2)
+  return remainder
+} else {
+  return Infinity;
+}
+
+}
+
+remainder = computeRemainder(5,2)
+console.log(remainder)
+
 /*-----------------------------------------------------------------
 Challenge: 06-range
 
@@ -184,9 +217,9 @@ Difficulty: Basic
 Prompt:
 
 - Write a function called formatWithPadding that accepts three arguments:
-  - A numeric argument (an integer) representing the number to format.
-  - A string argument (a single character) representing the character used to "pad" the returned string to a minimum length.
-  - Another numeric argument (an integer) representing the length to "pad" the returned string to.
+- A numeric argument (an integer) representing the number to format.
+- A string argument (a single character) representing the character used to "pad" the returned string to a minimum length.
+- Another numeric argument (an integer) representing the length to "pad" the returned string to.
 - The function should return the integer as a string, "left padded" to the length of the 3rd arg using the character provided in the 2nd arg.
 - If the length of the integer converted to a string is equal or greater than the 3rd argument, no padding is needed - just return the integer as a string.
 
